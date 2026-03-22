@@ -1,0 +1,314 @@
+[
+  {
+    "id": "1",
+    "title": "Identify web app niche",
+    "status": "backlog",
+    "priority": "high",
+    "tag": "Web App",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "2",
+    "title": "Set up markops.ai content strategy",
+    "status": "backlog",
+    "priority": "medium",
+    "tag": "Content",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "3",
+    "title": "Build Mission Control dashboard",
+    "status": "done",
+    "priority": "high",
+    "tag": "Corey Setup",
+    "assignedTo": "forge",
+    "activity": [
+      {
+        "date": "2026-03-20T05:00:00.000Z",
+        "agent": "forge",
+        "action": "Built v1 (rejected — static), rebuilt v2 in Next.js + TypeScript + Tailwind. Running on localhost:3001."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T05:00:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "4",
+    "title": "Connect Telegram",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Corey Setup",
+    "assignedTo": null,
+    "activity": [
+      {
+        "date": "2026-03-20T01:00:00.000Z",
+        "agent": "main",
+        "action": "Telegram bot token configured, Maciek paired as user 8413892623."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T01:00:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "5",
+    "title": "Install lossless memory (LCM)",
+    "status": "done",
+    "priority": "high",
+    "tag": "Corey Setup",
+    "assignedTo": null,
+    "activity": [
+      {
+        "date": "2026-03-20T01:30:00.000Z",
+        "agent": "main",
+        "action": "LCM installed — SQLite-based, lossless, nothing ever forgotten."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T01:30:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "6",
+    "title": "Morning Brief scheduled",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Corey Setup",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "7",
+    "title": "Configure agent team (7 agents)",
+    "status": "done",
+    "priority": "high",
+    "tag": "Corey Setup",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "8",
+    "title": "Authenticate Claude Code + Codex OAuth",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Corey Setup",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "9",
+    "title": "Nightly dashboard review scheduled",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Corey Setup",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "10",
+    "title": "Dashboard v2 improvements (chat, live data)",
+    "status": "backlog",
+    "priority": "medium",
+    "tag": "Dashboard",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "11",
+    "title": "Skill Hub built — /skills page with overlap detection",
+    "status": "done",
+    "priority": "high",
+    "tag": "Dashboard",
+    "assignedTo": "forge",
+    "activity": [
+      {
+        "date": "2026-03-20T12:00:00.000Z",
+        "agent": "forge",
+        "action": "Built /skills page — 52 skills seeded, overlap detection, sidebar updated."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T12:00:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "12",
+    "title": "opencli skill installed — global, Growth/Research primary, Social read-only",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Skills",
+    "assignedTo": null,
+    "activity": [
+      {
+        "date": "2026-03-20T12:30:00.000Z",
+        "agent": "main",
+        "action": "opencli installed globally — 231 commands, 39 sites. SKILL.md written with usage policy."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T12:30:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "13",
+    "title": "Phase 2: Self-improving skills — observe/inspect/amend/evaluate loop (cognee-skills pattern)",
+    "status": "backlog",
+    "priority": "medium",
+    "tag": "Skills",
+    "assignedTo": null,
+    "activity": [],
+    "lastActivityAt": null,
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "14",
+    "title": "marketingskills installed — 33 skills across 6 agents",
+    "status": "done",
+    "priority": "high",
+    "tag": "Skills",
+    "assignedTo": null,
+    "activity": [
+      {
+        "date": "2026-03-20T14:00:00.000Z",
+        "agent": "main",
+        "action": "33 marketing skills distributed across 6 agents. product-marketing-context installed globally."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T14:00:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "15",
+    "title": "Repo tracking system — 3 repos wired to dashboard",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Skills",
+    "assignedTo": "forge",
+    "activity": [
+      {
+        "date": "2026-03-20T14:10:00.000Z",
+        "agent": "forge",
+        "action": "3 repos tracked in skills.json with commit hashes. Tracked Repos section added to Skills Hub."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T14:10:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "16",
+    "title": "Meta-skills + LCM bridge — self-improvement loop live",
+    "status": "done",
+    "priority": "high",
+    "tag": "Skills",
+    "assignedTo": null,
+    "activity": [
+      {
+        "date": "2026-03-20T14:15:00.000Z",
+        "agent": "main",
+        "action": "skill-evolution loop wired to LCM memory. HEARTBEAT.md updated with evolution scan schedule."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T14:15:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "17",
+    "title": "Fix hydration mismatches — content, tasks, calendar pages",
+    "status": "done",
+    "priority": "medium",
+    "tag": "Dashboard",
+    "assignedTo": "forge",
+    "activity": [
+      {
+        "date": "2026-03-20T17:11:00.000Z",
+        "agent": "forge",
+        "action": "Hydration mismatch fixed across content, tasks, and calendar pages."
+      }
+    ],
+    "lastActivityAt": "2026-03-20T17:11:00.000Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "18",
+    "title": "agent0.markops.ai — product brief locked",
+    "status": "done",
+    "priority": "high",
+    "tag": "agent0",
+    "assignedTo": "main",
+    "activity": [
+      {
+        "date": "2026-03-21T14:07:43.483Z",
+        "agent": "main",
+        "action": "Product brief complete. Stack: Next.js 15 + Supabase + Shadcn (Starter App Template). Three layers: public site with live activity feed, master dashboard, member portal (sandbox). Niches: agencies + consultants. Offers: Launchpad $89.95 + done-with-you consulting."
+      }
+    ],
+    "lastActivityAt": "2026-03-21T14:07:43.484Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "19",
+    "title": "agent0.markops.ai — site architecture + Tony brief",
+    "status": "in-progress",
+    "priority": "high",
+    "tag": "agent0",
+    "assignedTo": "forge",
+    "activity": [
+      {
+        "date": "2026-03-21T14:07:43.484Z",
+        "agent": "main",
+        "action": "Briefing Tony Stark on full app architecture. Based on Starter App Template."
+      }
+    ],
+    "lastActivityAt": "2026-03-21T14:07:43.484Z",
+    "dueDate": null,
+    "notes": ""
+  },
+  {
+    "id": "20",
+    "title": "agent0.markops.ai — positioning + niche pages (Hunter)",
+    "status": "in-progress",
+    "priority": "high",
+    "tag": "agent0",
+    "assignedTo": "growth-lead",
+    "activity": [
+      {
+        "date": "2026-03-21T14:07:43.484Z",
+        "agent": "main",
+        "action": "Briefing Hunter on positioning strategy, niche pages (agencies + consultants), lead gen configurator copy."
+      }
+    ],
+    "lastActivityAt": "2026-03-21T14:07:43.484Z",
+    "dueDate": null,
+    "notes": ""
+  }
+]

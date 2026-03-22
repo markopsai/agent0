@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "☀️ Morning Brief → Telegram",
+    "time": "08:00",
+    "recurring": "daily",
+    "type": "cron"
+  },
+  {
+    "id": "2",
+    "title": "🎯 Nightly Dashboard Review",
+    "time": "22:00",
+    "recurring": "daily",
+    "type": "cron"
+  },
+  {
+    "id": "3",
+    "title": "Daily Article Draft",
+    "time": "10:00",
+    "recurring": "daily",
+    "type": "cron"
+  }
+]
