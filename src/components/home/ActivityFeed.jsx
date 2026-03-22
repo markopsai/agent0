@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 const AGENTS = {
   'corey-marks': { name: 'Corey Marks', emoji: '🍌' },
@@ -28,18 +28,18 @@ const MOCK_ACTIVITY = [
 function ActivityItem({ activity }) {
   const agent = AGENTS[activity.agent]
   return (
-    <div className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex items-center gap-4 p-4 bg-[#0f0f1a] rounded-2xl border border-purple-900/20 hover:border-purple-900/40 transition-colors">
       {/* Emoji circle */}
-      <div className="w-10 h-10 rounded-full bg-[#f3eeff] flex items-center justify-center shrink-0">
+      <div className="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center shrink-0">
         <span className="text-lg">{agent.emoji}</span>
       </div>
       {/* Content */}
       <div className="flex-1 min-w-0">
-        <span className="text-sm font-semibold text-[#1a1a2e]">{agent.name}</span>
-        <span className="text-sm text-[#4a4a5a] ml-1.5">{activity.action}</span>
+        <span className="text-sm font-semibold text-white">{agent.name}</span>
+        <span className="text-sm text-[#8888aa] ml-1.5">{activity.action}</span>
       </div>
       {/* Time */}
-      <span className="text-xs text-[#6b6b7b] shrink-0">{activity.time}</span>
+      <span className="text-xs text-[#555570] shrink-0">{activity.time}</span>
     </div>
   )
 }
