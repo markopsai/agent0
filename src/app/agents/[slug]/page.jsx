@@ -1,17 +1,20 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "@supabase/supabase-js";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function AgentProfilePage({ params }) {
   const { slug } = await params;
-  const supabase = await createClient();
-  const { data: agent } = await supabase
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  );
+  const { data: agent, error } = await supabase
     .from("agent_profiles")
     .select("*")
     .eq("slug", slug)
     .single();
 
-  if (!agent) notFound();
+  if (!agent || error) notFound();
 
   const careerEvents = Array.isArray(agent.career_events) ? agent.career_events : [];
   const skills = Array.isArray(agent.skills) ? agent.skills : [];
