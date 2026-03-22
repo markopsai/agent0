@@ -52,6 +52,9 @@ export default function HomePage() {
             <Link href="/agents" className="hidden md:inline text-sm text-[#8888aa] hover:text-white transition-colors">
               Agents
             </Link>
+            <Link href="/office" className="hidden md:inline text-sm text-[#8888aa] hover:text-white transition-colors">
+              Office
+            </Link>
             <Link
               href="/build"
               className="text-xs md:text-sm font-medium px-4 md:px-5 py-2 rounded-full bg-[#6c3fe0] text-white hover:bg-[#5a2fd0] transition-colors"
@@ -73,11 +76,11 @@ export default function HomePage() {
           </div>
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            Everyone teaches install.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6c3fe0] to-[#4a6cf7]">This is what happens after.</span>
+            The Orchestration OS for<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6c3fe0] to-[#4a6cf7]">Zero-Human Companies.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#8888aa] mb-10 max-w-2xl mx-auto leading-relaxed">
-            7 AI agents. Real work. Built in public so you can copy the model.
+            Hire AI employees, set goals, automate jobs — your business runs itself.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
@@ -86,12 +89,12 @@ export default function HomePage() {
             >
               Get the Launchpad — $89.95
             </Link>
-            <a
-              href="#feed"
+            <Link
+              href="/office"
               className="px-6 py-3 rounded-full border border-purple-500/30 text-[#8888aa] font-medium text-sm hover:text-white hover:border-purple-400/50 transition-all"
             >
-              Watch the team work ↓
-            </a>
+              Watch the team work →
+            </Link>
           </div>
         </div>
       </section>

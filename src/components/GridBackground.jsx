@@ -12,13 +12,21 @@ export default function GridBackground() {
     let width, height;
 
     // Dots = agents moving across the grid
-    const dots = Array.from({ length: 12 }, () => ({
+    const dots = Array.from({ length: 14 }, () => ({
       x: Math.random(),
       y: Math.random(),
-      vx: (Math.random() - 0.5) * 0.0008,
-      vy: (Math.random() - 0.5) * 0.0008,
-      size: Math.random() * 2 + 1.5,
-      opacity: Math.random() * 0.6 + 0.3,
+      // Much slower base speed
+      vx: (Math.random() - 0.5) * 0.0003,
+      vy: (Math.random() - 0.5) * 0.0003,
+      // Random wandering — each dot has a target it drifts toward
+      targetX: Math.random(),
+      targetY: Math.random(),
+      // How long until it picks a new target
+      targetTimer: Math.random() * 300,
+      size: Math.random() * 1.5 + 1,
+      opacity: Math.random() * 0.5 + 0.3,
+      // Occasional pause
+      pauseTimer: 0,
     }));
 
     function resize() {
@@ -46,13 +54,44 @@ export default function GridBackground() {
         ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
       }
 
-      // Update and draw dots
+      // Update dots with organic movement
       dots.forEach(dot => {
-        dot.x += dot.vx;
-        dot.y += dot.vy;
-        if (dot.x < 0 || dot.x > 1) dot.vx *= -1;
-        if (dot.y < 0 || dot.y > 1) dot.vy *= -1;
+        // Pause occasionally
+        if (dot.pauseTimer > 0) {
+          dot.pauseTimer--;
+        } else {
+          // Drift toward target with gentle force (not teleport)
+          const dx = dot.targetX - dot.x;
+          const dy = dot.targetY - dot.y;
+          dot.vx += dx * 0.00008;
+          dot.vy += dy * 0.00008;
+          // Damping — prevents acceleration buildup
+          dot.vx *= 0.97;
+          dot.vy *= 0.97;
+          // Clamp max speed
+          const speed = Math.sqrt(dot.vx * dot.vx + dot.vy * dot.vy);
+          if (speed > 0.0008) { dot.vx = (dot.vx / speed) * 0.0008; dot.vy = (dot.vy / speed) * 0.0008; }
+          dot.x += dot.vx;
+          dot.y += dot.vy;
+          // Bounce softly off edges
+          if (dot.x < 0.02 || dot.x > 0.98) dot.vx *= -0.7;
+          if (dot.y < 0.02 || dot.y > 0.98) dot.vy *= -0.7;
+          dot.x = Math.max(0.02, Math.min(0.98, dot.x));
+          dot.y = Math.max(0.02, Math.min(0.98, dot.y));
+          // Pick new target occasionally
+          dot.targetTimer--;
+          if (dot.targetTimer <= 0) {
+            dot.targetX = Math.random();
+            dot.targetY = Math.random();
+            dot.targetTimer = 200 + Math.random() * 400;
+            // Occasionally pause (agent "thinking")
+            if (Math.random() < 0.2) dot.pauseTimer = 30 + Math.random() * 60;
+          }
+        }
+      });
 
+      // Draw dots
+      dots.forEach(dot => {
         const px = dot.x * w;
         const py = dot.y * h;
 
