@@ -55,12 +55,12 @@ const AGENTS = [
 function AgentCard({ agent }) {
   return (
     <Link href={`/agents/${agent.slug}`} className="group block">
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 transition-all duration-200 hover:shadow-md hover:-translate-y-1">
-        <div className="text-5xl mb-4">{agent.emoji}</div>
-        <h3 className="text-lg font-semibold text-[#1a1a2e] mb-1">{agent.name}</h3>
-        <p className="text-[13px] font-medium text-[#6c3fe0] mb-3">{agent.role}</p>
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 md:p-6 transition-all duration-200 hover:shadow-md hover:-translate-y-1">
+        <div className="text-4xl md:text-5xl mb-3 md:mb-4">{agent.emoji}</div>
+        <h3 className="text-base md:text-lg font-semibold text-[#1a1a2e] mb-1">{agent.name}</h3>
+        <p className="text-xs md:text-[13px] font-medium text-[#6c3fe0] mb-2 md:mb-3">{agent.role}</p>
         <p className="text-sm text-[#4a4a5a] leading-relaxed">{agent.bio}</p>
-        <div className="mt-4">
+        <div className="mt-3 md:mt-4">
           <span className="text-sm font-medium text-[#6c3fe0] group-hover:underline">
             View profile &rarr;
           </span>
@@ -75,17 +75,17 @@ export default function AgentsPage() {
     <div className="min-h-screen bg-white">
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-gray-100">
-        <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
           <Link href="/" className="text-lg font-bold tracking-tight text-[#1a1a2e]">
             agent<span className="text-[#6c3fe0]">0</span>
           </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/" className="text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
+          <div className="flex items-center gap-4 md:gap-8">
+            <Link href="/" className="hidden md:inline text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
               Home
             </Link>
             <Link
               href="/build"
-              className="text-sm font-semibold px-5 py-2.5 rounded-full bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors"
+              className="text-xs md:text-sm font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors"
             >
               Get Launchpad — $89.95
             </Link>
@@ -94,20 +94,20 @@ export default function AgentsPage() {
       </nav>
 
       {/* Header */}
-      <section className="pt-32 pb-12 px-6">
-        <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-[#1a1a2e] mb-4">
+      <section className="pt-24 md:pt-32 pb-8 md:pb-12 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#1a1a2e] mb-3 md:mb-4">
             The Team
           </h1>
-          <p className="text-lg text-[#4a4a5a] max-w-lg mx-auto">
+          <p className="text-sm md:text-lg text-[#4a4a5a] max-w-lg mx-auto">
             7 AI agents. Each with a role, a personality, and a job to do.
           </p>
         </div>
       </section>
 
       {/* Agent Grid */}
-      <section className="pb-24 px-6">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="pb-12 md:pb-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {AGENTS.map((agent) => (
             <AgentCard key={agent.slug} agent={agent} />
           ))}
@@ -115,14 +115,14 @@ export default function AgentsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 py-10 px-6">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-[#6b6b7b]">
+      <footer className="border-t border-gray-100 py-8 md:py-10 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-xs md:text-sm text-[#6b6b7b]">
             &copy; {new Date().getFullYear()} agent0. Built entirely by AI agents.
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Home</Link>
-            <Link href="/build" className="text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Launchpad</Link>
+            <Link href="/" className="text-xs md:text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Home</Link>
+            <Link href="/build" className="text-xs md:text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Launchpad</Link>
           </div>
         </div>
       </footer>

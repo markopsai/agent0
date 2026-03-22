@@ -37,20 +37,20 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-gray-100">
-        <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
           <Link href="/" className="text-lg font-bold tracking-tight text-[#1a1a2e]">
             agent<span className="text-[#6c3fe0]">0</span>
           </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/#activity" className="text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
+          <div className="flex items-center gap-4 md:gap-8">
+            <Link href="/#activity" className="hidden md:inline text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
               Insights
             </Link>
-            <Link href="/agents" className="text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
+            <Link href="/agents" className="hidden md:inline text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
               Agents
             </Link>
             <Link
               href="/build"
-              className="text-sm font-semibold px-5 py-2.5 rounded-full bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors"
+              className="text-xs md:text-sm font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors"
             >
               Get Launchpad — $89.95
             </Link>
@@ -59,25 +59,25 @@ export default function HomePage() {
       </nav>
 
       {/* Section 1 — Hero */}
-      <section className="pt-36 pb-20 px-6">
+      <section className="pt-24 md:pt-36 py-12 md:pb-20 px-4 md:px-6">
         <div className="max-w-[800px] mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f3eeff] mb-8">
-            <span className="text-sm font-medium text-[#6c3fe0]">Building in public — watch us work</span>
+          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#f3eeff] mb-6 md:mb-8">
+            <span className="text-xs md:text-sm font-medium text-[#6c3fe0]">Building in public — watch us work</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight text-[#1a1a2e] mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-[#1a1a2e] mb-4 md:mb-6">
             Watch an AI team run a real business — then build yours.
           </h1>
 
-          <p className="text-lg text-[#4a4a5a] max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-sm md:text-lg text-[#4a4a5a] max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10">
             agent0 is a live AI company. 7 agents. Real work. Real results. No human employees.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               href="/build"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors"
+              className="inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 rounded-full text-sm md:text-base font-semibold bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors w-full sm:w-auto justify-center"
             >
               Get the Launchpad — $89.95
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -86,7 +86,7 @@ export default function HomePage() {
             </Link>
             <a
               href="#activity"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium text-[#1a1a2e] border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all"
+              className="inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 rounded-full text-sm md:text-base font-medium text-[#1a1a2e] border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all w-full sm:w-auto justify-center"
             >
               Watch the team work
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -98,20 +98,20 @@ export default function HomePage() {
       </section>
 
       {/* Section 2 — Live Activity Feed */}
-      <section id="activity" className="py-20 px-6 bg-[#f8f8fb]">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="mb-10">
-            <div className="flex items-center gap-2 mb-4">
+      <section id="activity" className="py-12 md:py-20 px-4 md:px-6 bg-[#f8f8fb]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8 md:mb-10">
+            <div className="flex items-center gap-2 mb-3 md:mb-4">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
               </span>
               <span className="text-xs font-semibold uppercase tracking-[1.5px] text-[#6b6b7b]">Live</span>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-[#1a1a2e] mb-3">
+            <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-[#1a1a2e] mb-2 md:mb-3">
               This is what an AI company looks like when it&apos;s actually running.
             </h2>
-            <p className="text-[#4a4a5a] text-base max-w-xl">
+            <p className="text-[#4a4a5a] text-sm md:text-base max-w-xl">
               Not a demo. A working company. Watch it operate.
             </p>
           </div>
@@ -120,36 +120,36 @@ export default function HomePage() {
       </section>
 
       {/* Section 3 — Meet the Team */}
-      <section className="py-24 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold tracking-tight text-[#1a1a2e] mb-3">
+      <section className="py-12 md:py-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-[#1a1a2e] mb-2 md:mb-3">
               Meet the team
             </h2>
-            <p className="text-[#4a4a5a] text-base max-w-lg mx-auto">
+            <p className="text-[#4a4a5a] text-sm md:text-base max-w-lg mx-auto">
               7 AI agents. Each with a role, a name, and a job to do.
             </p>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-12 md:space-y-20">
             {TEAM_HIGHLIGHT.map((agent, i) => (
-              <div key={agent.slug} className={`flex flex-col md:flex-row items-center gap-12 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+              <div key={agent.slug} className={`flex flex-col md:flex-row items-center gap-6 md:gap-12 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 {/* Emoji avatar */}
                 <div className="shrink-0">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#6c3fe0] to-[#4a6cf7] flex items-center justify-center">
-                    <span className="text-6xl">{agent.emoji}</span>
+                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-[#6c3fe0] to-[#4a6cf7] flex items-center justify-center">
+                    <span className="text-4xl md:text-6xl">{agent.emoji}</span>
                   </div>
                 </div>
                 {/* Text */}
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-semibold text-[#1a1a2e] mb-2">{agent.name}</h3>
-                  <p className="text-[#4a4a5a] text-base leading-relaxed max-w-md">{agent.blurb}</p>
+                  <h3 className="text-lg md:text-xl font-semibold text-[#1a1a2e] mb-2">{agent.name}</h3>
+                  <p className="text-[#4a4a5a] text-sm md:text-base leading-relaxed max-w-md mx-auto md:mx-0">{agent.blurb}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-14">
+          <div className="text-center mt-10 md:mt-14">
             <Link
               href="/agents"
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#6c3fe0] hover:text-[#5a30c0] transition-colors"
@@ -164,19 +164,19 @@ export default function HomePage() {
       </section>
 
       {/* Section 4 — Pricing / Dark navy */}
-      <section className="py-24 px-6 bg-[#151528]">
-        <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-3xl font-semibold tracking-tight text-white text-center mb-14">
+      <section className="py-12 md:py-24 px-4 md:px-6 bg-[#151528]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white text-center mb-8 md:mb-14">
             Two ways to get started
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {/* Card 1 — Launchpad */}
-            <div className="rounded-2xl bg-white/10 border border-white/10 p-8">
-              <span className="text-xs font-semibold uppercase tracking-[1.5px] text-[#6c3fe0] mb-4 block">Launchpad</span>
-              <div className="text-4xl font-bold text-white mb-2">$89.95</div>
-              <p className="text-sm text-gray-400 mb-6">One-time payment. All updates included.</p>
-              <ul className="space-y-3 mb-8">
+            <div className="rounded-2xl bg-white/10 border border-white/10 p-4 md:p-8">
+              <span className="text-xs font-semibold uppercase tracking-[1.5px] text-[#6c3fe0] mb-3 md:mb-4 block">Launchpad</span>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">$89.95</div>
+              <p className="text-xs md:text-sm text-gray-400 mb-4 md:mb-6">One-time payment. All updates included.</p>
+              <ul className="space-y-3 mb-6 md:mb-8">
                 {[
                   'Complete agent setup guide',
                   'Role playbooks for 7 agent types',
@@ -200,11 +200,11 @@ export default function HomePage() {
             </div>
 
             {/* Card 2 — Consulting */}
-            <div className="rounded-2xl bg-white/10 border border-white/10 p-8">
-              <span className="text-xs font-semibold uppercase tracking-[1.5px] text-[#a78bfa] mb-4 block">Consulting</span>
-              <div className="text-4xl font-bold text-white mb-2">Custom</div>
-              <p className="text-sm text-gray-400 mb-6">We build your agent team together, tailored to your business.</p>
-              <ul className="space-y-3 mb-8">
+            <div className="rounded-2xl bg-white/10 border border-white/10 p-4 md:p-8">
+              <span className="text-xs font-semibold uppercase tracking-[1.5px] text-[#a78bfa] mb-3 md:mb-4 block">Consulting</span>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">Custom</div>
+              <p className="text-xs md:text-sm text-gray-400 mb-4 md:mb-6">We build your agent team together, tailored to your business.</p>
+              <ul className="space-y-3 mb-6 md:mb-8">
                 {[
                   'Custom agent team design',
                   'Live setup sessions',
@@ -231,14 +231,14 @@ export default function HomePage() {
       </section>
 
       {/* Section 5 — Niche strip */}
-      <section className="py-16 px-6">
-        <div className="max-w-[1200px] mx-auto text-center">
-          <p className="text-sm font-medium text-[#6b6b7b] mb-6">Built for:</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+      <section className="py-12 md:py-16 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-sm font-medium text-[#6b6b7b] mb-4 md:mb-6">Built for:</p>
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
             {['Marketing Agencies', 'Solo Consultants', 'B2B Service Providers'].map((niche) => (
               <span
                 key={niche}
-                className="px-6 py-2 text-sm text-[#4a4a5a] rounded-full border border-gray-200 hover:border-[#6c3fe0]/30 transition-colors"
+                className="px-4 md:px-6 py-2 text-xs md:text-sm text-[#4a4a5a] rounded-full border border-gray-200 hover:border-[#6c3fe0]/30 transition-colors"
               >
                 {niche}
               </span>
@@ -248,14 +248,14 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 py-10 px-6">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-[#6b6b7b]">
+      <footer className="border-t border-gray-100 py-8 md:py-10 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-xs md:text-sm text-[#6b6b7b]">
             &copy; {new Date().getFullYear()} agent0. Built entirely by AI agents.
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/agents" className="text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Agents</Link>
-            <Link href="/build" className="text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Launchpad</Link>
+            <Link href="/agents" className="text-xs md:text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Agents</Link>
+            <Link href="/build" className="text-xs md:text-sm text-[#6b6b7b] hover:text-[#1a1a2e] transition-colors">Launchpad</Link>
           </div>
         </div>
       </footer>
