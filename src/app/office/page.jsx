@@ -213,18 +213,6 @@ export default function OfficePage() {
 
   return (
     <div className="min-h-screen bg-[#08080f] text-white">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-purple-900/20 bg-[#08080f]/80 backdrop-blur-xl">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-white">agent<span className="text-[#6c3fe0]">0</span></Link>
-          <div className="flex items-center gap-4">
-            <Link href="/insights" className="text-sm text-[#8888aa] hover:text-white hidden md:block">Insights</Link>
-            <Link href="/agents" className="text-sm text-[#8888aa] hover:text-white hidden md:block">Agents</Link>
-            <Link href="/build" className="text-sm font-medium px-4 py-2 rounded-full bg-[#6c3fe0] text-white">Get Launchpad</Link>
-          </div>
-        </div>
-      </nav>
-
       <div className="pt-14 md:pt-16 h-screen flex flex-col">
         {/* Header */}
         <div className="px-4 md:px-6 py-4 border-b border-purple-900/20 flex items-center justify-between">

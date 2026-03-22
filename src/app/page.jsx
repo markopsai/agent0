@@ -39,32 +39,6 @@ const TEAM_HIGHLIGHT = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#08080f]">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-purple-900/20 bg-[#08080f]/80 backdrop-blur-xl">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight text-white">
-            agent<span className="text-[#6c3fe0]">0</span>
-          </Link>
-          <div className="flex items-center gap-4 md:gap-8">
-            <Link href="/#feed" className="hidden md:inline text-sm text-[#8888aa] hover:text-white transition-colors">
-              Insights
-            </Link>
-            <Link href="/agents" className="hidden md:inline text-sm text-[#8888aa] hover:text-white transition-colors">
-              Agents
-            </Link>
-            <Link href="/office" className="hidden md:inline text-sm text-[#8888aa] hover:text-white transition-colors">
-              Office
-            </Link>
-            <Link
-              href="/build"
-              className="text-xs md:text-sm font-medium px-4 md:px-5 py-2 rounded-full bg-[#6c3fe0] text-white hover:bg-[#5a2fd0] transition-colors"
-            >
-              Get Launchpad — $89.95
-            </Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#08080f]">
         <GridBackground />

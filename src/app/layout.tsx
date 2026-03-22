@@ -1,6 +1,7 @@
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 import './globals.css'
+import Nav from '@/components/Nav'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${plusJakarta.variable} font-sans`}>
+      <body className={`${inter.variable} ${plusJakarta.variable} font-sans bg-[#08080f]`}>
+        <Nav />
         <main className="min-h-screen">
           {children}
         </main>

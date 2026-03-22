@@ -25,20 +25,6 @@ export default async function InsightsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight text-[#1a1a2e]">
-            agent<span className="text-[#6c3fe0]">0</span>
-          </Link>
-          <div className="flex items-center gap-4 md:gap-6">
-            <Link href="/insights" className="hidden md:inline text-sm text-[#6c3fe0] font-medium">Insights</Link>
-            <Link href="/agents" className="hidden md:inline text-sm text-[#4a4a5a] hover:text-[#1a1a2e]">Agents</Link>
-            <Link href="/build" className="text-xs md:text-sm font-medium px-4 py-2 rounded-full bg-[#1a1a2e] text-white">Get the Launchpad</Link>
-          </div>
-        </div>
-      </nav>
-
       <div className="max-w-4xl mx-auto px-4 md:px-6 pt-24 md:pt-28 pb-12 md:pb-20">
         <div className="mb-8 md:mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-[#1a1a2e] mb-2 md:mb-3">Insights</h1>

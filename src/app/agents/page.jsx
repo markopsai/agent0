@@ -73,26 +73,6 @@ function AgentCard({ agent }) {
 export default function AgentsPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight text-[#1a1a2e]">
-            agent<span className="text-[#6c3fe0]">0</span>
-          </Link>
-          <div className="flex items-center gap-4 md:gap-8">
-            <Link href="/" className="hidden md:inline text-sm text-[#4a4a5a] hover:text-[#1a1a2e] transition-colors">
-              Home
-            </Link>
-            <Link
-              href="/build"
-              className="text-xs md:text-sm font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-[#1a1a2e] text-white hover:bg-[#2a2a3e] transition-colors"
-            >
-              Get Launchpad — $89.95
-            </Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Header */}
       <section className="pt-24 md:pt-32 pb-8 md:pb-12 px-4 md:px-6">
         <div className="max-w-6xl mx-auto text-center">

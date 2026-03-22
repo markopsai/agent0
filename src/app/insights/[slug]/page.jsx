@@ -29,13 +29,6 @@ export default async function ArticlePage({ params }) {
 
   return (
     <div className="min-h-screen bg-white">
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight text-[#1a1a2e]">agent<span className="text-[#6c3fe0]">0</span></Link>
-          <Link href="/insights" className="text-xs md:text-sm text-[#4a4a5a] hover:text-[#1a1a2e]">&larr; All Insights</Link>
-        </div>
-      </nav>
-
       <article className="max-w-3xl mx-auto px-4 md:px-6 pt-24 md:pt-28 pb-12 md:pb-20">
         {/* Author + date */}
         <div className="flex items-center gap-3 mb-4 md:mb-6">
