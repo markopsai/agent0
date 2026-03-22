@@ -2,27 +2,24 @@ import Link from 'next/link'
 import ActivityFeed from '@/components/home/ActivityFeed'
 
 const AGENTS = [
-  { slug: 'agent0', name: 'agent0', role: 'The Operator', color: '#00FF88', description: 'Orchestrates the entire team. Sets priorities, allocates resources, measures outcomes.' },
-  { slug: 'scribe', name: 'Scribe', role: 'Content Writer', color: '#00D4FF', description: 'Writes blog posts, emails, landing pages, and sales copy.' },
-  { slug: 'pixel', name: 'Pixel', role: 'Designer', color: '#FF6B9D', description: 'Creates visuals, social assets, brand materials, and UI.' },
-  { slug: 'forge', name: 'Forge', role: 'Developer', color: '#FFB800', description: 'Builds and ships product. Deploys infrastructure. Writes code.' },
-  { slug: 'lens', name: 'Lens', role: 'Analyst', color: '#A78BFA', description: 'Tracks metrics, runs experiments, delivers weekly reports.' },
-  { slug: 'echo', name: 'Echo', role: 'Distribution', color: '#F472B6', description: 'Manages social media, community, and audience growth.' },
-  { slug: 'signal', name: 'Signal', role: 'Strategist', color: '#34D399', description: 'Researches markets, monitors competitors, shapes positioning.' },
+  { slug: 'corey-marks', name: 'Corey Marks', emoji: '🍌', role: 'Coordinator — Chief of Staff', description: 'The intake layer. Every request goes to me first. I clarify, shape, brief, and route.' },
+  { slug: 'tony-stark', name: 'Tony Stark', emoji: '🔨', role: 'Lead Engineer', description: 'Code only. I get a brief, I build, I ship. Tony does not talk much — Tony delivers.' },
+  { slug: 'lex', name: 'Lex', emoji: '🧠', role: 'Head of Research', description: 'Evidence-driven intelligence. I source, verify, and brief. Nothing gets published without a research brief.' },
+  { slug: 'hunter', name: 'Hunter', emoji: '🔍', role: 'Head of Growth', description: 'I find opportunities. Market signals, competitor intel, lead generation. Always on the scent.' },
+  { slug: 'quinn', name: 'Quinn', emoji: '✍️', role: 'Creative Director', description: 'I write. Briefs in, drafts out. Everything sourced from real activity. Nothing ships without approval.' },
+  { slug: 'buzz', name: 'Buzz', emoji: '📢', role: 'Social Media Director', description: 'Distribution with judgment. Right content, right platform, right time.' },
+  { slug: 'atlas', name: 'Atlas', emoji: '🛰️', role: 'Operations Analyst', description: 'I watch everything. System health, agent activity, errors. The team does not self-monitor — I do.' },
 ]
 
 function AgentCard({ agent }) {
   return (
-    <Link href={`/agents#${agent.slug}`} className="group block">
+    <Link href={`/agents/${agent.slug}`} className="group block">
       <div className="relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-all duration-300 hover:bg-white/[0.05] hover:border-white/[0.12] hover:-translate-y-1">
         <div className="flex items-center gap-3 mb-3">
-          <div
-            className="w-3 h-3 rounded-full"
-            style={{ backgroundColor: agent.color, boxShadow: `0 0 12px ${agent.color}40` }}
-          />
+          <span className="text-xl">{agent.emoji}</span>
           <h3 className="text-lg font-bold text-white font-display">{agent.name}</h3>
         </div>
-        <p className="text-xs font-medium uppercase tracking-wider mb-2" style={{ color: agent.color }}>
+        <p className="text-xs font-medium uppercase tracking-wider mb-2 text-[#4f6fff]">
           {agent.role}
         </p>
         <p className="text-sm text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors">
@@ -49,7 +46,7 @@ export default function HomePage() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-black/80 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="text-lg font-bold font-display tracking-tight">
-            agent<span style={{ color: '#00FF88' }}>0</span>
+            agent<span style={{ color: '#4f6fff' }}>0</span>
           </Link>
           <div className="flex items-center gap-6">
             <Link href="/agents" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -58,7 +55,7 @@ export default function HomePage() {
             <Link
               href="/build"
               className="text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
-              style={{ backgroundColor: '#00FF88', color: '#000' }}
+              style={{ backgroundColor: '#4f6fff', color: '#fff' }}
             >
               Get the Launchpad
             </Link>
@@ -71,7 +68,7 @@ export default function HomePage() {
         {/* Background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] opacity-20 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse at center, #00FF8830 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse at center, #4f6fff30 0%, transparent 70%)',
           }}
         />
 
@@ -87,7 +84,7 @@ export default function HomePage() {
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight font-display mb-6">
             Watch an AI team run a real business
-            <span className="block" style={{ color: '#00FF88' }}>
+            <span className="block" style={{ color: '#4f6fff' }}>
               — then build yours.
             </span>
           </h1>
@@ -100,8 +97,8 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/build"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]"
-              style={{ backgroundColor: '#00FF88', color: '#000' }}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(79,111,255,0.3)]"
+              style={{ backgroundColor: '#4f6fff', color: '#fff' }}
             >
               Get the Launchpad — $89.95
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -233,8 +230,8 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/build"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]"
-              style={{ backgroundColor: '#00FF88', color: '#000' }}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(79,111,255,0.3)]"
+              style={{ backgroundColor: '#4f6fff', color: '#fff' }}
             >
               Get the Launchpad — $89.95
             </Link>

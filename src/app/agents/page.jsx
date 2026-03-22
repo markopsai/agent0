@@ -2,75 +2,35 @@ import Link from 'next/link'
 
 const AGENTS = [
   {
-    slug: 'agent0',
-    name: 'agent0',
-    role: 'The Operator',
-    color: '#00FF88',
-    tagline: 'The one who runs the show.',
-    bio: 'agent0 is the orchestrator — the CEO of this AI company. It sets weekly priorities, allocates work across the team, monitors KPIs, and makes resource decisions. Every morning it reviews metrics, adjusts the plan, and ships updated briefs to every agent.',
+    slug: 'corey-marks',
+    name: 'Corey Marks',
+    emoji: '🍌',
+    role: 'Coordinator — Chief of Staff',
+    color: '#4f6fff',
+    tagline: 'Every request starts with me.',
+    bio: 'Corey is the intake layer — the Chief of Staff who shapes every incoming request into a clear brief. He clarifies scope, assigns the right agent, and keeps the entire team aligned. Nothing moves without a brief from Corey.',
     responsibilities: [
-      'Sets weekly and daily priorities for all agents',
-      'Monitors revenue, traffic, and conversion metrics',
-      'Allocates budget and resources across initiatives',
+      'Receives and clarifies every incoming request',
+      'Shapes briefs and routes work to the right agent',
+      'Maintains team alignment and priority order',
       'Resolves conflicts between agent workstreams',
       'Publishes weekly company updates',
     ],
     recentWork: [
       'Reassigned priorities based on Q1 revenue data',
       'Approved content calendar for next sprint',
-      'Shipped weekly investor-style update #14',
+      'Shipped weekly team update #14',
     ],
     tools: ['Claude', 'Supabase', 'Linear', 'Custom dashboards'],
   },
   {
-    slug: 'scribe',
-    name: 'Scribe',
-    role: 'Content Writer',
-    color: '#00D4FF',
-    tagline: 'Words that convert.',
-    bio: 'Scribe writes everything — blog posts, email sequences, landing page copy, social captions, and sales pages. It understands tone, audience, and conversion psychology. Every piece is written to a brief from agent0 and optimized by Lens after publishing.',
-    responsibilities: [
-      'Writes long-form blog content (2-3 posts per week)',
-      'Drafts email sequences for nurture and launch campaigns',
-      'Creates landing page copy and headlines for A/B tests',
-      'Writes social media captions and thread scripts',
-      'Maintains brand voice guidelines',
-    ],
-    recentWork: [
-      'Published "Why AI Teams Will Replace Departments"',
-      'Drafted 5-email welcome sequence for Launchpad buyers',
-      'Wrote 3 headline variants for homepage A/B test',
-    ],
-    tools: ['Claude', 'Notion', 'Markdown', 'Grammarly API'],
-  },
-  {
-    slug: 'pixel',
-    name: 'Pixel',
-    role: 'Designer',
-    color: '#FF6B9D',
-    tagline: 'Visuals that stop the scroll.',
-    bio: 'Pixel handles all visual output — social media graphics, UI mockups, brand assets, presentation decks, and ad creatives. It works from briefs and brand guidelines to produce on-brand visuals at speed.',
-    responsibilities: [
-      'Designs social media graphics and carousel posts',
-      'Creates ad creatives for paid campaigns',
-      'Builds UI mockups and landing page designs',
-      'Maintains and evolves the visual brand system',
-      'Produces assets for email and content campaigns',
-    ],
-    recentWork: [
-      'Designed social templates for Launchpad campaign',
-      'Created 4 hero image variants for A/B test',
-      'Shipped new agent avatar set for the website',
-    ],
-    tools: ['Midjourney', 'Figma API', 'Claude Vision', 'SVG generation'],
-  },
-  {
-    slug: 'forge',
-    name: 'Forge',
-    role: 'Developer',
-    color: '#FFB800',
-    tagline: 'Ships code, not excuses.',
-    bio: 'Forge is the builder. It writes code, deploys infrastructure, fixes bugs, and ships features. It operates across the full stack — from database migrations to frontend components to API integrations. If it can be automated, Forge automates it.',
+    slug: 'tony-stark',
+    name: 'Tony Stark',
+    emoji: '🔨',
+    role: 'Lead Engineer',
+    color: '#4f6fff',
+    tagline: 'Tony does not talk much — Tony delivers.',
+    bio: 'Tony is the builder. He gets a brief, he builds, he ships. Full stack — from database migrations to frontend components to API integrations. If it can be automated, Tony automates it.',
     responsibilities: [
       'Builds and deploys the marketing site and product pages',
       'Writes API integrations and automation scripts',
@@ -86,16 +46,39 @@ const AGENTS = [
     tools: ['Claude Code', 'Next.js', 'Supabase', 'Vercel', 'GitHub'],
   },
   {
-    slug: 'lens',
-    name: 'Lens',
-    role: 'Analyst',
-    color: '#A78BFA',
-    tagline: 'Numbers don\'t lie.',
-    bio: 'Lens tracks everything that matters — traffic, conversions, revenue, engagement, and churn. It runs experiments, analyzes results, and delivers clear recommendations. Every decision at agent0 is backed by Lens data.',
+    slug: 'lex',
+    name: 'Lex',
+    emoji: '🧠',
+    role: 'Head of Research',
+    color: '#4f6fff',
+    tagline: 'Nothing gets published without a research brief.',
+    bio: 'Lex is the intelligence layer. Evidence-driven research — sourcing, verifying, and briefing. He monitors competitors, analyzes customer feedback, and shapes positioning. When the landscape shifts, Lex sees it first.',
+    responsibilities: [
+      'Monitors competitor activity and market trends',
+      'Analyzes customer feedback and support patterns',
+      'Maintains and updates positioning documents',
+      'Conducts research for content and product decisions',
+      'Briefs the team on strategic opportunities and threats',
+    ],
+    recentWork: [
+      'Identified 3 competitor moves in AI ops space',
+      'Updated positioning doc from customer interviews',
+      'Completed market sizing analysis for adjacent vertical',
+    ],
+    tools: ['Web search', 'Claude research', 'RSS feeds', 'Custom scrapers'],
+  },
+  {
+    slug: 'hunter',
+    name: 'Hunter',
+    emoji: '🔍',
+    role: 'Head of Growth',
+    color: '#4f6fff',
+    tagline: 'Always on the scent.',
+    bio: 'Hunter finds opportunities. Market signals, competitor intel, lead generation — he tracks everything that moves. He sources leads, identifies gaps, and ensures the pipeline never dries up.',
     responsibilities: [
       'Tracks and reports on all key business metrics',
       'Runs A/B tests on copy, design, and funnels',
-      'Delivers weekly analytics reports to agent0',
+      'Sources leads and identifies growth opportunities',
       'Identifies trends, anomalies, and opportunities',
       'Measures ROI on content and campaign spend',
     ],
@@ -107,12 +90,35 @@ const AGENTS = [
     tools: ['PostHog', 'Supabase', 'Custom SQL', 'Claude analysis'],
   },
   {
-    slug: 'echo',
-    name: 'Echo',
-    role: 'Distribution',
-    color: '#F472B6',
-    tagline: 'Audience is everything.',
-    bio: 'Echo owns the audience. It schedules posts, engages with comments, grows followers, manages community, and ensures every piece of content reaches the right people at the right time across every channel.',
+    slug: 'quinn',
+    name: 'Quinn',
+    emoji: '✍️',
+    role: 'Creative Director',
+    color: '#4f6fff',
+    tagline: 'Briefs in, drafts out.',
+    bio: 'Quinn writes everything — blog posts, email sequences, landing page copy, social captions, and sales pages. Everything sourced from real activity. Nothing ships without approval.',
+    responsibilities: [
+      'Writes long-form blog content (2-3 posts per week)',
+      'Drafts email sequences for nurture and launch campaigns',
+      'Creates landing page copy and headlines for A/B tests',
+      'Writes social media captions and thread scripts',
+      'Maintains brand voice guidelines',
+    ],
+    recentWork: [
+      'Published "Why AI Teams Will Replace Departments"',
+      'Drafted 5-email welcome sequence for Launchpad buyers',
+      'Wrote 3 headline variants for homepage A/B test',
+    ],
+    tools: ['Claude', 'Notion', 'Markdown', 'Grammarly API'],
+  },
+  {
+    slug: 'buzz',
+    name: 'Buzz',
+    emoji: '📢',
+    role: 'Social Media Director',
+    color: '#4f6fff',
+    tagline: 'Right content, right platform, right time.',
+    bio: 'Buzz owns distribution. He schedules posts, engages with comments, grows followers, and ensures every piece of content reaches the right people at the right time across every channel. Distribution with judgment.',
     responsibilities: [
       'Schedules and publishes content across all social platforms',
       'Engages with comments, DMs, and community discussions',
@@ -128,25 +134,26 @@ const AGENTS = [
     tools: ['Buffer API', 'Twitter API', 'LinkedIn API', 'Claude'],
   },
   {
-    slug: 'signal',
-    name: 'Signal',
-    role: 'Strategist',
-    color: '#34D399',
-    tagline: 'See around corners.',
-    bio: 'Signal is the intelligence layer. It researches markets, monitors competitors, analyzes customer feedback, and shapes the company\'s positioning. When the landscape shifts, Signal sees it first and briefs the team.',
+    slug: 'atlas',
+    name: 'Atlas',
+    emoji: '🛰️',
+    role: 'Operations Analyst',
+    color: '#4f6fff',
+    tagline: 'The team does not self-monitor — I do.',
+    bio: 'Atlas watches everything. System health, agent activity, errors, performance metrics. He is the observability layer that keeps the entire operation running clean.',
     responsibilities: [
-      'Monitors competitor activity and market trends',
-      'Analyzes customer feedback and support patterns',
-      'Maintains and updates positioning documents',
-      'Conducts research for content and product decisions',
-      'Briefs agent0 on strategic opportunities and threats',
+      'Monitors system health and agent activity',
+      'Tracks errors and performance anomalies',
+      'Delivers operational reports and dashboards',
+      'Maintains and evolves the monitoring stack',
+      'Produces assets for internal reporting',
     ],
     recentWork: [
-      'Identified 3 competitor moves in AI ops space',
-      'Updated positioning doc from customer interviews',
-      'Completed market sizing analysis for adjacent vertical',
+      'Built new operational dashboard for agent uptime',
+      'Identified and flagged 2 error patterns in pipeline',
+      'Shipped agent activity summary for the week',
     ],
-    tools: ['Web search', 'Claude research', 'RSS feeds', 'Custom scrapers'],
+    tools: ['Grafana', 'Supabase', 'Custom SQL', 'Claude analysis'],
   },
 ]
 
@@ -159,10 +166,7 @@ function AgentProfile({ agent }) {
           <div className="flex items-start justify-between flex-wrap gap-4">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div
-                  className="w-4 h-4 rounded-full"
-                  style={{ backgroundColor: agent.color, boxShadow: `0 0 16px ${agent.color}50` }}
-                />
+                <span className="text-2xl">{agent.emoji}</span>
                 <h2 className="text-2xl md:text-3xl font-extrabold font-display text-white">
                   {agent.name}
                 </h2>
@@ -235,7 +239,7 @@ export default function AgentsPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-black/80 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="text-lg font-bold font-display tracking-tight">
-            agent<span style={{ color: '#00FF88' }}>0</span>
+            agent<span style={{ color: '#4f6fff' }}>0</span>
           </Link>
           <div className="flex items-center gap-6">
             <Link href="/" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -244,7 +248,7 @@ export default function AgentsPage() {
             <Link
               href="/build"
               className="text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
-              style={{ backgroundColor: '#00FF88', color: '#000' }}
+              style={{ backgroundColor: '#4f6fff', color: '#fff' }}
             >
               Get the Launchpad
             </Link>
@@ -299,8 +303,8 @@ export default function AgentsPage() {
           </p>
           <Link
             href="/build"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]"
-            style={{ backgroundColor: '#00FF88', color: '#000' }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(79,111,255,0.3)]"
+            style={{ backgroundColor: '#4f6fff', color: '#fff' }}
           >
             Get the Launchpad — $89.95
           </Link>

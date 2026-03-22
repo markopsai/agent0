@@ -3,30 +3,30 @@
 import { useState, useEffect, useRef } from 'react'
 
 const AGENTS = {
-  'agent0': { name: 'agent0', role: 'Operator', color: '#00FF88' },
-  'scribe': { name: 'Scribe', role: 'Writer', color: '#00D4FF' },
-  'pixel':  { name: 'Pixel', role: 'Designer', color: '#FF6B9D' },
-  'forge':  { name: 'Forge', role: 'Developer', color: '#FFB800' },
-  'lens':   { name: 'Lens', role: 'Analyst', color: '#A78BFA' },
-  'echo':   { name: 'Echo', role: 'Distribution', color: '#F472B6' },
-  'signal': { name: 'Signal', role: 'Strategist', color: '#34D399' },
+  'corey-marks': { name: 'Corey Marks', role: 'Coordinator', color: '#4f6fff' },
+  'tony-stark':  { name: 'Tony Stark', role: 'Lead Engineer', color: '#4f6fff' },
+  'lex':         { name: 'Lex', role: 'Research', color: '#4f6fff' },
+  'hunter':      { name: 'Hunter', role: 'Growth', color: '#4f6fff' },
+  'quinn':       { name: 'Quinn', role: 'Creative', color: '#4f6fff' },
+  'buzz':        { name: 'Buzz', role: 'Social', color: '#4f6fff' },
+  'atlas':       { name: 'Atlas', role: 'Operations', color: '#4f6fff' },
 }
 
 const MOCK_ACTIVITY = [
-  { agent: 'scribe', action: 'Published "Why AI Teams Will Replace Departments" to the blog', time: '2 min ago' },
-  { agent: 'echo', action: 'Scheduled 12 posts across LinkedIn and X for this week', time: '5 min ago' },
-  { agent: 'lens', action: 'Landing page conversion improved — 4.2% → 5.1% after copy test', time: '8 min ago' },
-  { agent: 'forge', action: 'Deployed agent dashboard v2.3 to production', time: '12 min ago' },
-  { agent: 'signal', action: 'Identified 3 competitor moves in AI ops space — brief sent to agent0', time: '15 min ago' },
-  { agent: 'pixel', action: 'Designed new social templates for the Launchpad campaign', time: '18 min ago' },
-  { agent: 'agent0', action: 'Reassigned weekly priorities based on revenue metrics', time: '23 min ago' },
-  { agent: 'scribe', action: 'Drafted email sequence for Launchpad buyers — 5 emails, 3 days', time: '31 min ago' },
-  { agent: 'lens', action: 'Weekly report: 2,847 visitors, 142 signups, $4,280 revenue', time: '38 min ago' },
-  { agent: 'forge', action: 'Fixed authentication edge case on mobile Safari', time: '45 min ago' },
-  { agent: 'echo', action: 'Replied to 23 comments and 8 DMs across platforms', time: '52 min ago' },
-  { agent: 'signal', action: 'Updated positioning doc based on customer interview analysis', time: '1 hr ago' },
-  { agent: 'pixel', action: 'Created 4 hero image variants for A/B test', time: '1 hr ago' },
-  { agent: 'agent0', action: 'Approved Scribe\'s content calendar for next 2 weeks', time: '1 hr ago' },
+  { agent: 'quinn', action: 'Published "Why AI Teams Will Replace Departments" to the blog', time: '2 min ago' },
+  { agent: 'buzz', action: 'Scheduled 12 posts across LinkedIn and X for this week', time: '5 min ago' },
+  { agent: 'atlas', action: 'Landing page conversion improved — 4.2% → 5.1% after copy test', time: '8 min ago' },
+  { agent: 'tony-stark', action: 'Deployed agent dashboard v2.3 to production', time: '12 min ago' },
+  { agent: 'lex', action: 'Identified 3 competitor moves in AI ops space — brief sent to Corey', time: '15 min ago' },
+  { agent: 'hunter', action: 'Sourced 14 new lead opportunities from market signals', time: '18 min ago' },
+  { agent: 'corey-marks', action: 'Reassigned weekly priorities based on revenue metrics', time: '23 min ago' },
+  { agent: 'quinn', action: 'Drafted email sequence for Launchpad buyers — 5 emails, 3 days', time: '31 min ago' },
+  { agent: 'atlas', action: 'Weekly report: 2,847 visitors, 142 signups, $4,280 revenue', time: '38 min ago' },
+  { agent: 'tony-stark', action: 'Fixed authentication edge case on mobile Safari', time: '45 min ago' },
+  { agent: 'buzz', action: 'Replied to 23 comments and 8 DMs across platforms', time: '52 min ago' },
+  { agent: 'lex', action: 'Updated positioning doc based on customer interview analysis', time: '1 hr ago' },
+  { agent: 'hunter', action: 'Created competitor landscape brief for Q1 planning', time: '1 hr ago' },
+  { agent: 'corey-marks', action: 'Approved Quinn\'s content calendar for next 2 weeks', time: '1 hr ago' },
 ]
 
 function StatusDot({ color }) {
